@@ -1,0 +1,1 @@
+dotnet ef dbcontext scaffold "Server=DESKTOP-3FP92LL; Initial Catalog=MarketAlfa; Integrated Security=True; TrustServerCertificate=True; " Microsoft.EntityFrameworkCore.SqlServer -o Models -c "MarketAlfaContext" -d --force
