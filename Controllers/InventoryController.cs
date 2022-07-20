@@ -235,7 +235,7 @@ namespace MarketAlfa.Controllers
             {
                 using (MarketAlfaContext _DB = new MarketAlfaContext())
                 {
-                    var _List = await _DB.Inventories.Where(y => y.Amount < y.Low && y.ProductNavigation.Status == true).Select(y => new { Code = y.ProductNavigation.Code, Name = y.ProductNavigation.Name, Category = y.ProductNavigation.CategoryNavigation.Name, Measure = y.ProductNavigation.DescriptionNavigation.Name, Amount = y.Amount }).ToListAsync();
+                    var _List = await _DB.Inventories.Where(y => y.Amount < y.Low).Select(y => new { Code = y.ProductNavigation.Code, Name = y.ProductNavigation.Name, Category = y.ProductNavigation.CategoryNavigation.Name, Measure = y.ProductNavigation.DescriptionNavigation.Name, Amount = y.Amount }).ToListAsync();
                     _Result.Success = 1;
                     _Result.Message = "Consulta Correcto";
                     _Result.Data = _List;

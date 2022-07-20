@@ -37,7 +37,7 @@ namespace MarketAlfa.Services
                     catch (Exception e)
                     {
                         Transaction.Rollback();
-                        throw new Exception("Ocurio un Error en la transacion" + e.ToString());
+                        throw new Exception("Ocurrió un Error en la transaction" + e.ToString());
                     }
                 }
             }
