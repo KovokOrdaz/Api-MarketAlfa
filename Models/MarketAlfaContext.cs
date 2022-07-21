@@ -68,7 +68,7 @@ namespace MarketAlfa.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Server=DESKTOP-3FP92LL; Initial Catalog=MarketAlfa; Integrated Security=True; TrustServerCertificate=True; ");
+                optionsBuilder.UseSqlServer("Server=.; Initial Catalog=MarketAlfa; Integrated Security=True; TrustServerCertificate=True; ");
             }
         }
 
