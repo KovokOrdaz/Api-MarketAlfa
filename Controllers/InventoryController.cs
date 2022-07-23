@@ -152,7 +152,7 @@ namespace MarketAlfa.Controllers
                         }
                         _DB.Entry(Inventory).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
                         _DB.SaveChanges();
-                        var LotCode = _DB.InventoryLots.OrderByDescending(x => x.Id).FirstOrDefault();
+                        var LotCode = _DB.InventoryLots.OrderBy(x => x.Id).FirstOrDefault();
                         var Lot = new InventoryLot();
                         Lot.Product = _Entity.Product;
                         Lot.Amount = _Entity.Amount;
